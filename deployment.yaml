@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cloud-app
+  name: cloud-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: cloud-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 5
+      maxUnavailable: 2
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cloud-app
+    spec:
+      containers:
+      - name: cloud-app
+        image: vicat28/cloud-app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+          - name: http
+            containerPort: 80
+            protocol: TCP
+        resources: {}
+status: {}
