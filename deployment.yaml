@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: cloud-app
-        image: vicat28/cloud-app:1.0
+        image: vicat28/cloud-app:1.1
         imagePullPolicy: IfNotPresent
         ports:
           - name: http
