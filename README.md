@@ -1,5 +1,5 @@
 # Manifesty Kubernetes dla cloud-app
-To repozytorium zawiera pliki manifestów Kubernetes odpowiedzialnych za prawidłowe uruchomienie aplikacji z repozytorium [cloud_z2_source](https://github.com/pawelp29/cloud_z2_source).
+To repozytorium zawiera pliki manifestów Kubernetes odpowiedzialnych za prawidłowe uruchomienie aplikacji z repozytorium [cloud_z2_source](https://github.com/pawelp29/cloud_z2_source). Dodatkowo repozytorium zawiera plik [Dockerfile](./Dockerfile) z instrukcją budowania obrazu, który jest używany przez obiekt *CronJob* z pliku [operator.yaml](./operator.yaml) oraz łańcuch zadań GitHub Actions służący do budowania tego obrazu i wysyłania go do rejestru DockerHub: [https://hub.docker.com/r/vicat28/cloud-app-operator](https://hub.docker.com/r/vicat28/cloud-app-operator).
 
 ## Pierwsze uruchomienie systemu (4A)
 W celu pierwszego uruchomienia systemu wykonano następujące polecenia:
